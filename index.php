@@ -10,41 +10,37 @@
 
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #393E5E;">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+        <form action="db/CRUD/player/create_player.php" method="post">
+            <!-- Player Name -->
+            <div class="form-row col-12">
+                <div class="form-group col-8 mx-auto" style="padding-top: 20px;">
+                    <label for="name_player" class="navbar-brand">Player Name</label>
+                    <input type="text" name="name_player" id="name_player" maxlength="255" required autofocus class="form-control">
+                </div>
             </div>
-        </nav>
 
-        <script src="js/jquery-3.3.1.slim.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-    </body>
-</html>
+            <!-- Player Email -->
+            <div class="form-row col-12">
+                <div class="form-group col-8 mx-auto" style="padding-top: 20px;">
+                    <label for="email_player" class="navbar-brand">Email</label>
+                    <input type="email" name="email_player" id="email_player" maxlength="255" required autofocus class="form-control">
+                </div>
+            </div>
+
+            <!-- Player Password -->
+            <div class="form-row col-12">
+                <div class="form-group col-8 mx-auto" style="padding-top: 20px;">
+                    <label for="pass_player" class="navbar-brand">Password</label>
+                    <input type="password" name="pass_player" id="pass_player" maxlength="255" required autofocus class="form-control">
+                </div>
+            </div>
+
+            <!-- Botão -->
+            <div class="row col-6 mx-auto">
+                <div class="form-group col-3 mx-auto text-left" style="padding-top: 20px;">
+                    <input type="submit" value="cadastrar" class="btn btn-primary">
+                </div>
+            </div>
+        </form>
+
+<?php include_once 'includes/foot.php'?>
